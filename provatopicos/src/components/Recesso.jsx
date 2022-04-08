@@ -1,16 +1,14 @@
 import React from "react"
 import Card from "./Card"
-
 import { connect } from "react-redux"
+function Sorteio(props){
+    const {num} = props
 
-function Soma(props){
-    const {min, max} = props
     return (
-        <Card title=" Está chegando..." blue>
+        <Card title="Está chegando..." green>
             <div>
                 <span>
-                    <span>Resultado: </span>
-                    <span>{(min + max)}</span>
+                    <span>Estarei de recesso em {num} dias</span>
                 </span>
             </div>
         </Card>
@@ -19,9 +17,8 @@ function Soma(props){
 
 function mapStateToProps(state) {
     return {
-        min: state.numeros.min,
-        max: state.numeros.max
+        num: state.numeros.num
     }
 }
 
-export default connect(mapStateToProps)(Soma)
+export default connect(mapStateToProps)(Sorteio)
