@@ -8,10 +8,10 @@ import {alterarNumero} from "../store/actions/numeros"
 function Numero(props) {
     const {num} = props
     return(
-        <Card title = "Escolha um Números" blue>
+        <Card title = "Escolha um Número" blue>
             <div className="Numero">
                 <span>
-                    <span>Escolha um número:</span>
+                    <span>Número:</span>
                     <input type="number" value={num}
                     onChange={e => props.alterarNum(+e.target.value)}/>
                 </span>

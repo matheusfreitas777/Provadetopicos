@@ -4,7 +4,7 @@ import { connect } from "react-redux"
 function Sorteio(props){
     const {num} = props
     const aleatorio = parseInt(Math.random() * num)
-    const texto_sorteio = "Sorteio de Números de 0 à " + num
+    const texto_sorteio = "Sorteio de Números de 0 a N " 
     
     return (
         <Card title={`${texto_sorteio}`} purple>
